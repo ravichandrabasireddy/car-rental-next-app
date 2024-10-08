@@ -4,5 +4,6 @@ export const config = {
     matcher: [
         "/profile/:path*",
         "/reservations/:path*",
+        "/admin/:path*",
     ]
 };

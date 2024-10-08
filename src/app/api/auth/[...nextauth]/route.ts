@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { JWT } from "next-auth/jwt";
 
 async function refreshToken(token: JWT): Promise<JWT>{
-    const res = await fetch(process.env.RENTAL_API_URL + "/auth/refresh", {
+    const res = await fetch("https://34.72.8.122:3000" + "/auth/refresh", {
         method: 'POST',
         headers: { 
             Authorization: `Refresh ${token.backend_tokens.refresh_token}`
@@ -44,7 +44,7 @@ export const authOptions: NextAuthOptions = {
 
                 const { email, password } = credentials;
 
-                const res = await fetch(process.env.RENTAL_API_URL + "/auth/login", {
+                const res = await fetch("https://34.72.8.122:3000" + "/auth/login", {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username: email, password: password }),

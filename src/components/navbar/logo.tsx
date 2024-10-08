@@ -16,8 +16,7 @@ const Logo = () => {
 
             <div
                 onClick={() => router.push('/')}
-                className="hidden md:block cursor-pointer text-white"
-            >
+                className="hidden md:block cursor-pointer text-white">
                 Car Rental
             </div>
         </div>
